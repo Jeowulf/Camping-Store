@@ -20,7 +20,7 @@ var UserSchema = new Schema({
   facebook: {},
   twitter: {},
   google: {},
-  github: {}
+  github: {},
   cart: [CartItem.schema]
 });
 
