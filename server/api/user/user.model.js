@@ -3,6 +3,8 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var crypto = require('crypto');
+var CartItem = require('../cart/cartitem.model');
+
 var authTypes = ['github', 'twitter', 'facebook', 'google'];
 
 var UserSchema = new Schema({
@@ -19,6 +21,7 @@ var UserSchema = new Schema({
   twitter: {},
   google: {},
   github: {}
+  cart: [CartItem.schema]
 });
 
 /**
